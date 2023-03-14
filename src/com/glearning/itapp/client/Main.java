@@ -9,12 +9,13 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Please enter your firstname and last name to generate credentails");
-		String enterFirstName=sc.nextLine();
-		String lastName = sc.nextLine();
+	//	System.out.println("Please enter your firstname and last name to generate credentails");
+	//	String enterFirstName=sc.nextLine();
+	//	String lastName = sc.nextLine();
 		
-		Employee employee = new Employee(enterFirstName, lastName);
-		employee.setCompany("xyz");
+	//	Employee employee = new Employee(enterFirstName, lastName);
+		Employee employee = new Employee("harshit", "choudary");
+		employee.setCompany("abc");
 		ServiceCredentialsImpl serviceCredentials = new ServiceCredentialsImpl();
 		System.out.println("Please enter the department from the following ");
 		System.out.println("1. Technical");
