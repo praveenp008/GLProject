@@ -7,7 +7,13 @@ import com.glearning.itapp.service.ServiceCredentialsImpl;
 
 public class Main {
 	public static void main(String[] args) {
-		Employee employee = new Employee("Praveenkumar", "Patil");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter your firstname and last name to generate credentails");
+		String enterFirstName=sc.nextLine();
+		String lastName = sc.nextLine();
+		
+		Employee employee = new Employee(enterFirstName, lastName);
 		employee.setCompany("xyz");
 		ServiceCredentialsImpl serviceCredentials = new ServiceCredentialsImpl();
 		System.out.println("Please enter the department from the following ");
@@ -16,7 +22,6 @@ public class Main {
 		System.out.println("3. Human Resource");
 		System.out.println("4. Legal");
 		// Create the intstance of scanner class
-		Scanner sc = new Scanner(System.in);
 		int option = sc.nextInt();
 
 		switch (option) {
